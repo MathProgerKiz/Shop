@@ -21,6 +21,7 @@ class Order(models.Model):
 class Product(models.Model):
     title = models.CharField(max_length=128)
     description = models.CharField(max_length=128)
+    price=models.FloatField()
     file = models.CharField(max_length=128,default=None)  # тип продукта (в PDF ,ZIP)
     created_at = models.DateTimeField(auto_now_add=True,
                                       blank=True)
